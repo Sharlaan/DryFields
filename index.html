@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TP2 - DryField</title>
+	<link rel="stylesheet" href="libs/TimeCircles.css">
+	<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+	<nav>
+		<div class="Stats">
+			<div><span id="recoltes"></span><img src="img/blé.jpg"></div>
+			<div><span id="argent"></span><img src="img/money.png"></div>
+			<div><span id="eau"></span><img src="img/water.jpg"></div>
+		</div>
+		<h1>Dry Fields</h1>
+		<div>
+			<div id="play" class="btn">Jouer</div>
+			<div id="scores_link" class="btn">Scores</div>
+		</div>
+	</nav>
+	<section class="main">
+		<section>
+			<div id="warnings"></div>
+			<div class="btn" id="buyWater_link">Acheter de l'eau</div>
+			<div id="stopWatch"></div>
+		</section>
+
+		<section class="champs">
+			<div class="champ">
+				<div class="btn" id="i1">Irriguer</div>
+				<div>
+					<canvas id="tank1"></canvas>
+					<canvas id="mat1"></canvas>
+				</div>
+				<div class="btn" id="r1">Récolter</div>
+			</div>
+
+			<div class="champ">
+				<div class="btn" id="i2">Irriguer</div>
+				<div>
+					<canvas id="tank2"></canvas>
+					<canvas id="mat2"></canvas>
+				</div>
+				<div class="btn" id="r2">Récolter</div>
+			</div>
+
+			<div class="champ">
+				<div class="btn" id="i3">Irriguer</div>
+				<div>
+					<canvas id="tank3"></canvas>
+					<canvas id="mat3"></canvas>
+				</div>
+				<div class="btn" id="r3">Récolter</div>
+			</div>
+		</section>
+
+		<section class="champs">
+			<fieldset> <legend>Champ 1</legend>
+				<table>
+					<tr> <td>Conso°:</td>	<td id="consumption1"></td>	</tr>
+					<tr> <td>Eau:</td>		<td id="water1"></td>		</tr>
+					<tr> <td>Maturité:</td>	<td id="maturity1"></td>	</tr>
+				</table>
+			</fieldset>
+
+			<fieldset> <legend>Champ 2</legend>
+				<table>
+					<tr> <td>Conso°:</td>	<td id="consumption2"></td>	</tr>
+					<tr> <td>Eau:</td>		<td id="water2"></td>		</tr>
+					<tr> <td>Maturité:</td>	<td id="maturity2"></td>	</tr>
+				</table>
+			</fieldset>
+
+			<fieldset> <legend>Champ 3</legend>
+				<table>
+					<tr> <td>Conso°:</td>	<td id="consumption3"></td>	</tr>
+					<tr> <td>Eau:</td>		<td id="water3"></td>		</tr>
+					<tr> <td>Maturité:</td>	<td id="maturity3"></td>	</tr>
+				</table>
+			</fieldset>
+		</section>	
+
+	</section>
+
+	<div id="overlay">
+		<div id="buyWater">
+			<input type="number" id="buyWater_input" value="0" min="0"> L
+			<div class="btn">Acheter<br>de l'eau</div>
+		</div>
+		<div id="scores">
+			<h3><b>Classement</b></h3>
+			<table border="1">
+				<thead>
+					<tr> <th>Rang</th> <th>Joueurs</th> <th>Scores</th> </tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</div>
+
+	<script src="libs/jquery-2.2.1.min.js"></script>
+	<script src="libs/waterbubble.min.js"></script>
+	<script src="libs/TimeCircles.js"></script>
+	<script src="libs/DataTable/datatables.min.js"></script>
+	<!-- <script src="libs/socket.io.min.js"></script>
+	<script>
+	var socket = io('http://10.1.256:8080');
+	socket.on('newScore', function (data) {
+		console.log('WS reçu', data);
+	});
+	</script> -->
+	<script src="utils/packaging.js"></script>
+	<script src="utils/utils.js"></script>
+	<script src="utils/observer.js"></script>
+	<script src="utils/observable.js"></script>
+	<script src="model.js"></script>
+	<script src="champs.js"></script>
+	<script src="view.js"></script>
+	<script src="controller.js"></script>
+	<script src="main.js"></script>
+	<script src="launcher.js"></script>
+</body>
+</html>

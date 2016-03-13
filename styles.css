@@ -1,0 +1,159 @@
+html, body {
+	margin:10px auto;
+	padding:0; max-width: 1024px;
+	font-family:Calibri; font-size:1.2em;
+	cursor: default;
+}
+
+input { border: 1px solid; }
+input:hover { border: 1px solid CornFlowerblue; }
+
+nav { display:flex; justify-content:space-between; }
+nav > div { display:flex; align-items:center; }
+nav > div > div { padding:20px; }
+.Stats > div {
+	border: 5px solid #325d81;
+	border-radius:10px;
+	margin: auto 10px;
+	white-space: nowrap;
+}
+.Stats img { height:30px; margin-left:10px; vertical-align:-5px; }
+nav .btn { padding:20px 40px; }
+
+#warnings { color:red; text-align:center; }
+
+.btn {
+	transition: 0.4s;
+	padding:10px;
+	text-align:center;
+	// prevent selection of text on multiclics
+	-webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
+.btn:not(.disabled):hover {
+	cursor:pointer;
+	color:white;
+	background-color:#325d81;
+	text-shadow: 2px 2px black;
+}
+
+.main section:first-child {
+	display:flex;
+	margin:20px 0 40px;
+	align-items: center;
+}
+#warnings, #stopWatch { width: 300px; }
+#buyWater .btn, #buyWater_link { border: 5px solid #325d81; }
+#buyWater_link {
+	padding:20px;
+	width: 400px;
+	border-radius: 40px;
+}
+#stopWatch {
+	height: 120px;
+	text-align: right;
+	// display: none;
+}
+
+.main {
+	height:100%;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+}
+
+.champs {
+	display:flex;
+	justify-content:space-around;
+	margin-bottom:50px;
+}
+.champs > fieldset {
+	border-radius:10px;
+	width:200px;
+}
+fieldset > legend { padding: 0 10px; }
+fieldset > table { font-size: 0.8em; width: 100%; }
+fieldset > table tr > td:nth-child(2) { text-align: right; }
+.champ {
+	border: 5px solid #325d81;
+	border-radius:10px;
+	width:200px;
+}
+.champ:nth-child(1) > div:nth-child(2) {
+	background: url('img/lavande.jpg') no-repeat;
+}
+.champ:nth-child(2) > div:nth-child(2) {
+	background: url('img/ble.jpg') no-repeat;
+}
+.champ:nth-child(3) > div:nth-child(2) {
+	background: url('img/coquelicots.jpg') no-repeat;
+}
+.champ > div:nth-child(2) {
+	height:200px;
+	position:relative;
+}
+.champ #i1, .champ #i2, .champ #i3 {
+	padding-left: 45px;
+}
+.champ #r1, .champ #r2, .champ #r3 {
+	padding-right: 45px;
+}
+.disabled {
+	color: LightGrey;
+}
+.harvestReady {
+	background-color: ForestGreen;
+	font-weight: bold;
+}
+.champ canvas {
+	background-color: white;
+	border-radius: 50px;
+	height: 100px;
+	position: absolute;
+}
+.champ #tank1, .champ #tank2, .champ #tank3 {
+	top: -75px; left: -50px;
+}
+.champ #mat1, .champ #mat2, .champ #mat3 {
+	bottom: -75px; right: -50px;
+}
+#overlay {
+	z-index:1;
+	background-color:rgba(0,0,0,0.5);
+	height:100%; width:100%;
+	position: fixed;
+	top:0; left:0;
+	display:none;
+	justify-content:center;
+	align-items:center;
+	transition:0.5s;
+}
+#overlay > div {
+	z-index:2;
+	background-color:white;
+	border: 5px solid #325d81;
+	border-radius:10px;
+	padding: 20px;
+	box-shadow: 0 0 100px;
+}
+#buyWater,#scores { display:none; }
+#buyWater input {
+	margin-bottom:15px;
+	padding:10px;
+	text-align:center;
+}
+#scores { max-height: 80%; }
+#scores h3 { text-align:center; margin:0; }
+#scores #DataTables_Table_0_filter {}
+#scores table { border-collapse:collapse; }
+#scores table th,#scores table td { padding:5px 10px; }
+#scores table tr:first-child {
+	color:white;
+	background-color:#325d81;
+	text-shadow: 2px 2px black;
+}
+#scores table tr:nth-child(odd) td {
+	background-color: #afcfaf;
+}

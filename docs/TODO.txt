@@ -1,0 +1,30 @@
+Schémas MVC projet et correction : transférer la logique applicative de la View vers le Controller
+
+Mettre le jeu en pause lors de l'affichage des scores
+
+insertion nom dans bdd au GameOver
+
+Gérer le reset game après game over
+
+Scroll auto sur ton rang lors de l'affichage des scores
+
+gestion des états disabled des btn harvest/irrigate/buyWater à finir:
+	buyWater:hover pas désactivé pdt la pause
+	background-color:ForestGreen d'un btn.harvestReady pas désactivé pdt la pause
+
+débugger affichage erroné du % des waterbubbles à l'éxécution post-clics
+
+stopWatch: déclencher le gameOver lorsque fin du temps imparti
+
+Changer border-color argent/water avec affichage des warnings correspondants
+
+Bind keys :
+	touches A,Z,E sur les btn Irriguer
+	1,2,3 pour récolter
+	espace pour acheter eau
+	P pour pause
+	S pour Scores
+	ESC => $('#overlay').click()
+
+documentation
+	schéma MVC / diagramme d'objets

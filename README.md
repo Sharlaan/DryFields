@@ -1,2 +1,2 @@
 # DryFields
-mini-game buit with MVC architecture
+mini-game built with MVC architecture
